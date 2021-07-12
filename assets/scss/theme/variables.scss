@@ -1,0 +1,77 @@
+$primary :  #dc241f;
+$secondary: #4d4d4d;
+
+$font-primary: 'Lato', sans-serif;
+$font-secondary: 'Lato', sans-serif;
+$font-heading: $font-secondary;
+$font-icon: FontAwesome;
+$font-sas: 'sas-webfont';
+$font-family-base: $font-primary !important;
+
+$black: #222222;
+$white: #ffffff;
+$gray: #4d4d4d;
+$light-gray: #707276;
+$dark-gray: #e9e9ed;
+
+// Global
+$color-body: #999999;
+$color-primary: #dc241f;
+$color-secondary: #860617;
+$color-tertiary: transparent;
+$color-quaternary: transparent;
+$body-bg: #fff;
+$font-body: $font-primary !important;
+$content-padding: 80px;
+
+/* --------------------
+TOPBAR SETTING
+-----------------------*/
+$topbar-bg: darken($color-primary, 40%);
+$topbar-color: $color-body;
+$topbar-nav-color: $color-primary;
+$topbar-nav-hover-color: $color-secondary;
+$topbar-font: $font-primary;
+
+/* --------------------
+NAVBAR SETTING
+-----------------------*/
+$navbar-bg: $white;
+$navbar-font: $font-secondary;
+$navbar-color: $gray;
+$navbar-hover-color: $color-primary;
+$navbar-active-color: $color-primary;
+$navbar-stiky-color: $color-primary;
+
+/* --------------------
+FOOTER SETTING
+-----------------------*/
+$footer-bg: $gray;
+$footer-font-color: $color-body;
+
+/* --------------------
+BUTTON SETTING
+-----------------------*/
+$btn-primary-hover: $color-secondary;
+
+// Background
+$bg__topbar: $color-primary;
+
+body {
+  background: #f2f2f2;
+  font-family: 'Lato', sans-serif;
+}
+
+.cfix {
+  content: '';
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+@import 'mixin.scss';
+

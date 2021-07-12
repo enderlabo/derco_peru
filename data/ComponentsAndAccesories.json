@@ -1,0 +1,136 @@
+[
+  {
+    "text": "Aros y Neumáticos",
+    "value": "Aros y Neumáticos",
+    "items": [
+      {
+        "text": "Neumáticos",
+        "value": "Neumáticos"
+      },
+      {
+        "text": "Aros",
+        "value": "Aros"
+      }
+    ]
+  },
+  {
+    "text": "Accesorios",
+    "value": "Accesorios",
+    "items": [
+      {
+        "text": "ALARMAS",
+        "value": "ALARMAS"
+      },
+      {
+        "text": "AUTORADIOS Y MULTIMEDIAS",
+        "value": "AUTORADIOS Y MULTIMEDIAS"
+      },
+      {
+        "text": "AIRE ACONDICIONADO",
+        "value": "AIRE ACONDICIONADO"
+      },
+      {
+        "text": "MINIATURAS",
+        "value": "MINIATURAS"
+      },
+      {
+        "text": "TUNNING",
+        "value": "TUNNING"
+      }
+    ]
+  },
+  {
+    "text": "Repuestos",
+    "value": "Repuestos",
+    "items": [
+      {
+        "text": "SUSPENSIÓN Y DIRECCIÓN",
+        "value": "SUSPENSIÓN Y DIRECCIÓN"
+      },
+      {
+        "text": "AFINAMIENTO Y ENCENDIDO",
+        "value": "AFINAMIENTO Y ENCENDIDO"
+      },
+      {
+        "text": "FRENOS",
+        "value": "FRENOS"
+      },
+      {
+        "text": "EMBRAGUE Y TRANSMISIÓN",
+        "value": "EMBRAGUE Y TRANSMISIÓN"
+      },
+      {
+        "text": "DISTRIBUCIÓN",
+        "value": "DISTRIBUCIÓN"
+      },
+      {
+        "text": "REFRIGERACIÓN Y CALEFACCIÓN",
+        "value": "REFRIGERACIÓN Y CALEFACCIÓN"
+      }
+    ]
+  },
+  {
+    "text": "Lubricantes",
+    "value": "Lubricantes",
+    "items": [
+      {
+        "text": "Lubricante de Motor",
+        "value": "Lubricante de Motor"
+      },
+      {
+        "text": "Lubricante de Transmisión",
+        "value": "Lubricante de Transmisión"
+      },
+      {
+        "text": "Refrigerante",
+        "value": "Refrigerante"
+      }
+    ]
+  },
+  {
+    "text": "Baterías",
+    "value": "Baterías",
+    "items": [
+      {
+        "text": "Autos",
+        "value": "Autos"
+      },
+      {
+        "text": "Camiones",
+        "value": "Camiones"
+      }
+    ]
+  },
+  {
+    "text": "Insumos",
+    "value": "Insumos",
+    "items": [
+      {
+        "text": "Car Care",
+        "value": "Car Care"
+      },
+      {
+        "text": "Limpiador de frenos",
+        "value": "Limpiador de frenos"
+      },
+      {
+        "text": "Limpiaparabrisas",
+        "value": "Limpiaparabrisas"
+      },
+      {
+        "text": "Pasta antichirridos",
+        "value": "Pasta antichirridos"
+      }
+    ]
+  },
+  {
+    "text": "Otros",
+    "value": "Otros",
+    "items": [
+      {
+        "text": "Otros",
+        "value": "Otros"
+      }
+    ]
+  }
+]

@@ -1,0 +1,91 @@
+{
+  "name": "derco-peru",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:css": "stylelint \"**/*.{scss,vue}\"",
+    "format": "prettier --write --config .prettierrc \"**/*.{js,jsx,vue}\" --ignore-path .gitignore",
+    "lint": "yarn lint:js",
+    "cm": "cz",
+    "dev:open": "cypress open",
+    "deploy": "npm run build && eb deploy"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint --fix"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "@ax2/lozad-module": "^0.2.0",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@nuxtjs/axios": "5.12.4",
+    "@nuxtjs/device": "^1.2.7",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/recaptcha": "^0.6.2",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@vue/composition-api": "^1.0.0-rc.1",
+    "@vueform/slider": "^1.0.3",
+    "bootstrap": "^4.6.0",
+    "bootstrap-vue": "^2.21.2",
+    "consola": "^2.15.3",
+    "core-js": "3.8.1",
+    "crypto-js": "^4.0.0",
+    "currency.js": "^2.0.3",
+    "date-fns": "^2.19.0",
+    "hooper": "^0.3.4",
+    "nuxt": "^2.14.6",
+    "stylelint-config-standard": "^20.0.0",
+    "swiper": "5.x",
+    "vee-validate": "^3.4.5",
+    "vue-analytics-facebook-pixel": "^1.0.1",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-content-placeholders": "^0.2.1",
+    "vue-gtag": "^1.11.0",
+    "vue-lazy-hydration": "^2.0.0-beta.4",
+    "vue-observe-visibility": "^1.0.0",
+    "vue-slick-carousel": "^1.0.6",
+    "vue-slider-component": "^3.2.11",
+    "vue-the-mask": "^0.11.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@nuxt/types": "~2.14.12",
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/fontawesome": "^1.1.2",
+    "@nuxtjs/svg": "^0.1.12",
+    "babel-eslint": "^10.1.0",
+    "commitizen": "^4.2.2",
+    "cypress": "^6.6.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-chai-friendly": "^0.6.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "fibers": "^5.0.0",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "sass": "^1.32.8",
+    "sass-loader": "10",
+    "stylelint-config-prettier": "^8.0.2"
+  }
+}

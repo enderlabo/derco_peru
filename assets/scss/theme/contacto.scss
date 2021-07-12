@@ -1,0 +1,519 @@
+.title {
+  font-size: 34px;
+  line-height: 19px;
+  color: #4d4d4d;
+  font-weight: 900;
+  font-family: "Lato";
+  text-align: center;
+  margin-bottom: 55px;
+}
+.contacto-component {
+    p,
+    label,
+    span {
+      font-family: 'Lato', sans-serif;
+    }
+
+    #cotiza__p1 {
+      margin-left: -15px;
+      a{
+        color: $gray;
+        text-decoration: underline;
+      }
+      @media (max-width: 991px) {
+        margin-left: -15px;
+        margin-bottom: 5px;
+      }
+    }
+
+    #GasPump {
+      margin-right: 10%;
+    }
+
+    .cotiza__downloadIcon {
+      position: relative;
+      top: 12px;
+      right: 56%;
+      color: #5a6268;
+    }
+
+    h5 {
+      color: #4d4d4d;
+      font-weight: 600;
+      padding-left: 30px;
+      margin-top: 20px;
+    }
+
+    .fakeSpace {
+      height: 50px;
+    }
+    .fakeSpace2 {
+      height: 19px;
+    }
+
+    .cotiza__img {
+      width: 100% !important;
+      padding: 0px;
+    }
+
+    .contacto_formContainer {
+      background-color: white;
+      padding: 30px;
+      padding-top: 20px;
+
+      label {
+        font-size: 14px;
+        line-height: 1.5px;
+        font-weight: 600;
+        color: #4d4d4d;
+        margin-bottom: 15px !important;
+        padding-top: 5px;
+      }
+
+      p {
+        padding-left: 0;
+        font-size: 12px;
+        color: #4d4d4d;
+      }
+
+      input {
+        margin-bottom: 10px;
+      }
+
+      #message-contact{
+          height: 150px !important;
+      }
+
+      //#select-asunto
+      //{
+      //  width: 475px !important;
+      //}
+    }
+    .custom-control {
+      padding-left: 15px;
+      .custom-control-label{
+        margin-bottom: 5px  !important;
+      }
+    }
+
+    .cotiza__inputCheck {
+      display: flex;
+      padding-left: 0px;
+      span{
+        a{
+          color: $gray;
+          text-decoration: underline;
+        }
+      }
+      .custom-control {
+        right: 82%;
+        top: 22px;
+      }
+
+      p {
+        margin-top: 25px;
+        margin-left: 0px;
+      }
+    }
+
+    .cotiza__inputCheck2 {
+      padding-left: 15px;
+    }
+
+    .cotiza__inputRadio1 {
+      display: flex;
+
+      p {
+        margin-left: 10px;
+      }
+
+      .custom-control {
+        position: relative;
+        right: 25%;
+      }
+    }
+
+    .cotiza__inputRadio2 {
+      display: flex;
+
+      p {
+        margin-left: 10px;
+      }
+
+      .custom-control {
+        right: 76%;
+      }
+    }
+
+    .cotizar__button {
+      display: flex;
+      justify-content: center;
+      margin-top: 34px;
+
+      button {
+        border-radius: 25px;
+        background-color: #dc241f;
+        border-color: #dc241f;
+        width: 65%;
+        height: 50px;
+        font-weight: 600;
+      }
+    }
+
+    .cotiza__dataSheet {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cotiza__imgColor_container {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      top: 50px;
+
+      label {
+        font-size: 10px;
+        color: gray;
+        font-weight: bold;
+      }
+    }
+
+    .cotiza_nombreCar {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      label {
+        font-size: 15px;
+        color: gray;
+        font-weight: bold;
+      }
+    }
+
+    .cotiza__imgColor {
+      display: flex;
+      position: relative;
+      top: 10%;
+    }
+
+    .cotiza__displayPrice {
+
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      top: 2%;
+      font-size: 20px;
+      background-color: #dc241f;
+      color: white;
+      span {
+        color: white;
+        text-decoration: line-through;
+        font-size: 14px;
+      }
+      p {
+        position:relative;
+        text-align: center;
+        font-size: 14px;
+        color: white;
+        margin-bottom: 0px !important;
+      }
+      #horario {
+          padding-top: 20px;
+          margin-bottom: 30px;
+      }
+    }
+
+    .cotiza__carIcons {
+      display: flex;
+      justify-content: space-evenly;
+      background-color: #e5e5e5;
+      position: relative;
+      top: 5%;
+
+      :first-child {
+        display: flex;
+        height: 50px;
+        align-items: center;
+        color: #4D4D4D;
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+      }
+
+      :last-child {
+        color: #4D4D4D;
+        font-family: 'Lato', sans-serif;
+      }
+    }
+
+    .cotiza__downloadSheet {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      top: 13%;
+      height: 50px;
+
+      button {
+        background-color: #b2b2b2;
+        border-color: transparent !important;
+        color: #666666;
+        font-size: 14px;
+        font-weight: 700;
+        width: 350px !important;
+        border-radius: 25px;
+        height: 50px;
+      }
+    }
+
+    .cotiza__buyOnline {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #e5e5e5;
+      position: relative;
+      top: 23%;
+
+      label {
+        font-size: 12px;
+        color: #595959;
+        text-align: center;
+      }
+    }
+
+    .cotizar__footer {
+      background-color: #e5e5e5;
+      display: flex;
+      margin-top: 60px;
+
+      label {
+        font-size: 10px;
+        color: gray;
+        font-weight: 600;
+        padding: 5px;
+        height: 50px;
+        text-align: center;
+      }
+    }
+
+    .cotiza__button {
+      display: flex;
+      justify-content: center;
+      margin: 25px 0;
+
+      button {
+        border-radius: 25px;
+        background-color: #dc241f;
+        border-color: #dc241f;
+        width: 75%;
+      }
+    }
+
+    .cotiza__buttonOnline {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      font-size: 12px;
+      color: #595959;
+
+      button {
+        border-radius: 25px;
+        background-color: #dc241f;
+        border-color: #dc241f;
+        width: 65%;
+        height: 50px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+    }
+
+    /*---------------------------------
+    -----------MEDIA QUERY------------
+    -------------------------------*/
+    @media (max-width: 1199px) {
+      .cotiza__imgColor_container img {
+        width: 100%;
+      }
+      .cotiza__inputCheck .custom-control {
+        right: 96%;
+      }
+      .cotiza__inputRadio1 .custom-control {
+        top: -5px;
+        right: 34%;
+      }
+      .cotiza__inputRadio2 .custom-control {
+        right: 96%;
+      }
+      .cotizar__button button {
+        width: 75%;
+      }
+      .cotiza__buyOnline {
+        top: 32%;
+        // button {
+        //     width: 75%;
+        // }
+      }
+      .cotiza__downloadSheet {
+        button {
+          width: 75%;
+          font-size: 12px;
+        }
+      }
+
+      .cotiza__downloadIcon {
+        top: 13px;
+        right: 68%;
+        color: #5a6268;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .cotiza__inputRadio1 .custom-control {
+        top: -5px;
+        right: 53%;
+      }
+
+      .cotizar__button button {
+        width: 100%;
+      }
+      .cotiza__buyOnline {
+        top: 32.5%;
+
+        button {
+          width: 90%;
+        }
+      }
+      .cotiza__downloadIcon {
+        right: 83%;
+      }
+      .cotiza__downloadSheet {
+        top: 25%;
+
+        button {
+          width: 100%;
+          font-size: 11px !important;
+        }
+      }
+    }
+
+    @media (max-width: 767px) {
+      #form {
+        margin-top: 50px;
+        padding: 0;
+      }
+      .cotiza__downloadIcon {
+        right: 67%;
+      }
+      .cotiza__downloadSheet button {
+        width: 85%;
+      }
+      .cotiza__inputCheck .custom-control {
+        right: 97%;
+      }
+      .cotiza__inputRadio1 .custom-control {
+        right: 29%;
+      }
+      .cotiza__inputRadio2 .custom-control {
+        right: 92%;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .cotiza__imgColor_container img {
+        width: 100%;
+      }
+      .cotiza__inputCheck .custom-control {
+        right: 91%;
+      }
+      .cotiza__inputRadio1 .custom-control {
+        right: 27%;
+      }
+      .cotiza__inputRadio2 .custom-control {
+        right: 85%;
+      }
+    }
+
+    @media (max-width: 414px) {
+      .cotiza__imgColor_container img {
+        width: 100%;
+      }
+      #GasPump {
+        margin-right: 10%;
+      }
+      #form {
+        margin-top: 50px;
+      }
+      h5 {
+        margin-bottom: 8% !important;
+      }
+      .cotiza__displayPrice {
+        text-align: center;
+      }
+      .cotiza__inputCheck .custom-control {
+        right: 96%;
+      }
+      .cotiza__inputRadio1 .custom-control {
+        right: 41%;
+      }
+      .cotiza__inputRadio2 .custom-control {
+        right: 95%;
+      }
+      .cotiza__downloadSheet button {
+        font-size: 12px;
+        width: 85% !important;
+        height: 35px;
+      }
+      .cotiza__buttonOnline button {
+        height: 40px;
+      }
+      .cotizar__button button {
+        height: 40px;
+      }
+      .cotiza__downloadIcon {
+        top: 5px;
+        right: 74%;
+      }
+    }
+
+    @media (max-width: 375px) {
+      #form {
+        margin-top: 50px;
+      }
+      .cotiza__downloadIcon {
+        top: 5px;
+        right: 77%;
+      }
+      .cotiza__imgColor_container img {
+        width: 100% !important;
+      }
+      .cotiza__displayPrice {
+        text-align: center;
+      }
+      .cotiza__downloadSheet button {
+        font-size: 11px;
+      }
+      .cotiza__inputRadio1 .custom-control {
+        right: 48%;
+      }
+    }
+  }
+  .iconsContacto{
+    .col{
+      margin-top: 60px;
+      text-align: center;
+      img{
+        margin-bottom: 10px;
+      }
+    }
+    &__title{
+      color: $gray;
+      font-family: $font-primary;
+      font-size: 14px;
+      margin: 0px;
+      font-weight: 400;
+    }
+    &__numero{
+      color: $gray;
+      font-family: $font-primary;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }

@@ -1,0 +1,431 @@
+<template>
+  <div class="card-container manual-flip">
+    <div class="card">
+      <div class="front">
+        <div class="user align-content-center">
+          <b-img
+            center
+            :alt="item.model.name + ' ' + item.name"
+            :src="item.image"
+          />
+        </div>
+        <div class="main">
+          <div class="d-flex justify-content-between">
+            <div class="car-info ml-4 text-uppercase font-weight-bold">
+              <img
+                :src="
+                  require('@/assets/img/marcas/horizontales/' +
+                    item.model.brandSlug +
+                    '.png')
+                "
+                :alt="item.model.brandSlug"
+                class="img-brand"
+              />
+              <div class="f-20">
+                {{ item.model.name }}
+              </div>
+              <div class="f-11">
+                {{ item.name }}
+              </div>
+              <b-badge
+                v-for="(b, index) in item.specs"
+                :key="index"
+                pill
+                sm
+                variant="secondary"
+                class="mr-1 text-capitalize pills-car"
+                >{{ b.value }}</b-badge
+              >
+            </div>
+          </div>
+        </div>
+        <div class="ml-4 section-price">
+          <div>
+            <b-form-radio-group
+              v-model="selected"
+              :options="item.prices"
+              text-field="name"
+              value-field="id"
+              sm
+              class="year my-2 justify-content-center align-items-center"
+            >
+            </b-form-radio-group>
+          </div>
+          <div>
+            <div class="price-title">PRECIO LISTA</div>
+            <div class="text-price">
+              {{ pricesUSD | USD }} ó {{ pricesPEN | PE }}
+            </div>
+          </div>
+        </div>
+        <div
+          v-if="item.benefits.length > 0"
+          class="info w-100 text-center mt-1"
+        >
+          <template v-for="(itemB, index) in item.benefits">
+            <span :key="index">
+              &nbsp;{{ itemB.name }}&nbsp;
+              <span v-if="index + 1 !== item.benefits.length">|</span>
+            </span>
+          </template>
+        </div>
+        <div class="text-center align-content-center car-buttons">
+          <b-button
+            v-if="urlOnline"
+            pill
+            class="btn-red mr-2 text-uppercase"
+            target="_blank"
+            :href="urlOnline"
+          >
+            Reserva Online
+          </b-button>
+
+          <b-button
+            pill
+            variant="secondary"
+            class="cot px-3"
+            :to="`/catalogo-derco/autos/${item.model.brandSlug}/${item.model.slug}/${item.slug}/${year}/${item.id}/cotizar`"
+          >
+            COTIZAR
+          </b-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+import { mapGetters } from 'vuex'
+
+export default {
+  name: 'CardCars',
+  props: {
+    item: {
+      type: Object,
+      default() {
+        return {}
+      }
+    }
+  },
+  data() {
+    return {
+      urlImage: '',
+      logoUrl: '',
+      selected: ''
+    }
+  },
+  computed: {
+    ...mapGetters({
+      linkCar: 'cars/linkCar'
+    }),
+    pricesUSD() {
+      const price = this.item.prices.find(item => item.id === this.selected)
+      return !price ? 0 : price.value
+    },
+    pricesPEN() {
+      const price = this.item.prices.find(item => item.id === this.selected)
+      return !price ? 0 : price.convertedValue
+    },
+    year() {
+      const price = this.item.prices.find(item => item.id === this.selected)
+      return !price ? 0 : price.name
+    },
+    urlOnline() {
+      const price = this.item.prices.find(item => item.id === this.selected)
+      return !price ? null : price.store_link
+    }
+  },
+  watch: {
+    item(val) {
+      const count = val.prices.length
+      this.selected = val.prices[count - 1].id
+    }
+  },
+  mounted() {
+    const count = this.item.prices.length
+    this.selected = this.item.prices[count - 1].id
+  }
+}
+</script>
+<style scoped lang="scss">
+.info {
+  background: #e5e5e5;
+  color: #4d4d4d;
+  font-size: 12px;
+  padding-top: 6.6px;
+  padding-bottom: 6.6px;
+}
+.pills-car {
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+.section-price {
+  //margin-left: 2.2rem;
+  //margin-right: 2.2rem;
+  .year {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .price-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4d4d4d;
+  }
+  .text-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #dc241f;
+  }
+}
+.img-brand {
+  max-height: 20px;
+}
+
+.card {
+  background: none repeat scroll 0 0 #ffffff;
+  border-radius: 4px;
+  color: #444444;
+}
+
+.card-container,
+.front {
+  padding-top: 3rem;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card .cover {
+  height: 0px;
+  overflow: hidden;
+  border-radius: 4px 4px 0 0;
+}
+
+.card .cover img {
+  width: 100%;
+}
+
+.card .user {
+  display: block;
+  height: 130px;
+  margin: -110px auto 0;
+  overflow: hidden;
+  width: 250px;
+}
+
+.card .user img {
+  background: none repeat scroll 0 0 #ffffff;
+  border: 4px solid #ffffff;
+  height: 100%;
+}
+
+.card .content {
+  /*! background-color: rgba(0, 0, 0, 0); */
+  /*! box-shadow: none; */
+  padding: 10px 20px 20px;
+}
+
+.card .content .main {
+  min-height: 160px;
+}
+
+.card .back .content .main {
+  height: 215px;
+}
+
+.card .name {
+  font-size: 22px;
+  line-height: 28px;
+  margin: 10px 0 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.card h5 {
+  margin: 5px 0;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.card .profession {
+  color: #999999;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card .footer {
+  border-top: 1px solid #eeeeee;
+  color: #999999;
+  margin: 30px 0 0;
+  padding: 10px 0 0;
+  text-align: center;
+}
+
+.card .footer .social-links {
+  font-size: 18px;
+}
+
+.card .footer .social-links a {
+  margin: 0 7px;
+}
+
+.card .footer .btn-simple {
+  margin-top: -6px;
+}
+
+.card .header {
+  padding: 15px 20px;
+  height: 90px;
+}
+
+.card .motto {
+  border-bottom: 1px solid #eeeeee;
+  color: #999999;
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.card .stats-container {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.card .stats {
+  display: block;
+  float: left;
+  width: 33.333333%;
+  text-align: center;
+}
+
+.card .stats:first-child {
+  border-right: 1px solid #eeeeee;
+}
+
+.card .stats:last-child {
+  border-left: 1px solid #eeeeee;
+}
+
+.card .stats h4 {
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.card .stats p {
+  color: #777777;
+}
+
+.navbar-brand-logo .logo {
+  border: 1px solid #333333;
+  border-radius: 50%;
+  float: left;
+  overflow: hidden;
+  width: 60px;
+}
+
+.navbar .navbar-brand-logo .brand {
+  color: #ffffff;
+  float: left;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 60px;
+}
+
+.navbar-default .navbar-brand-logo .brand {
+  color: #555;
+}
+
+/*       Fix bug for IE      */
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .front {
+    -ms-backface-visibility: visible;
+    backface-visibility: visible;
+  }
+
+  .front {
+    z-index: 4;
+  }
+
+  .card-container:not(.manual-flip):hover .back,
+  .card-container.manual-flip.hover .back {
+    z-index: 5;
+    visibility: visible;
+  }
+}
+
+.unit__spanContain span {
+  font-size: 12px;
+  color: #4d4d4d;
+}
+
+.car-img img {
+  width: 100%;
+  height: auto;
+}
+
+.car-dcto span {
+  background-color: red;
+  color: white;
+}
+
+.car-buttons {
+  transform: translateY(+1.1rem);
+}
+
+.car-info {
+  color: #5d5d5d;
+}
+
+.f-20 {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.f-11 {
+  font-size: 12px;
+  margin-top: 0;
+}
+
+.year {
+  color: #5f5f5f;
+  font-weight: 600;
+}
+
+.btn-red {
+  background-color: #fe1f18;
+  border-color: #fe1f18;
+  font-size: 13px;
+  height: 35px;
+}
+
+.cot {
+  width: 123px;
+  margin-left: -3px;
+  height: 35px;
+  font-size: 13px;
+}
+
+.btn-red:hover {
+  background-color: #860617;
+  border-color: #860617;
+}
+
+.cot:hover {
+  background-color: black;
+  border-color: black;
+}
+
+@media (max-width: 450px) {
+  .btn-red {
+    margin-left: 8px;
+    width: 150px;
+  }
+
+  .cot {
+    width: 150px;
+    margin-left: 3px;
+  }
+}
+</style>

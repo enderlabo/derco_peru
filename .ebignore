@@ -1,0 +1,14 @@
+jspm_packages/
+.npm
+.node_repl_history
+*.tgz
+.yarn-integrity
+.editorconfig
+/argon
+
+# Mac OSX
+.DS_Store
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

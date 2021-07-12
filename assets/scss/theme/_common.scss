@@ -1,0 +1,285 @@
+/* SCROLL */
+::-webkit-scrollbar {
+  width: 8px;
+  margin: 2px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10%;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.125);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #828282;
+  transition: background 0.5s;
+}
+
+// Select
+.custom-select:focus{
+  border-color: #ced4da;
+}
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: $gray;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(77 77 77 / 25%);
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #dc241f !important;
+  background-color: #dc241f !important;
+}
+
+//Pagination
+.paginationStyle {
+  margin: 40px auto;
+  justify-content: center;
+
+  .page-item {
+    button {
+      border-radius: 10px;
+      border: 1px solid $color-primary;
+      margin: 0px 1px;
+      color: $color-primary;
+      outline: none;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+    }
+  }
+
+  .page-item.active .page-link {
+    color: white;
+    border: 1px solid red !important;
+    background-color: red !important;
+  }
+
+  .page-item .page-link:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  .disabled span {
+    border-radius: 10px;
+    border: 1px solid $color-primary;
+    margin: 0px 3px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+  }
+
+  .page-item:first-child .page-link,
+  .page-item:last-child .page-link {
+    border-radius: 10px;
+  }
+}
+//
+
+.content-title {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+
+//p {
+//  color: $gray;
+//  font-weight: bold;
+//}
+
+.elevated {
+  background: $white;
+}
+
+#btn-danger {
+  width: 200px;
+  height: 40px;
+}
+.button-featured {
+  position: absolute;
+  right: 20% !important;
+}
+
+.cardFeatured-priceText {
+  display: flex;
+}
+#titleDestacados {
+  color: #4d4d4d;
+  font-size: 12px;
+  font-size: 600;
+  margin-left: 115px;
+}
+
+.button-red-section {
+  margin-top: 5.3125rem;
+  margin-bottom: 1.875rem;
+  border-radius: 1.25rem;
+  border: none;
+  width: 21.875rem;
+  height: 2.5rem;
+  font-size: 14px;
+  background: #dc241f;
+  color: white;
+  font-weight: bold;
+}
+:hover.button-red-section {
+  background: #860617;
+}
+:hover#dropDown {
+  text-decoration: none;
+  background-color: #dc241f !important;
+  /* color: white; */
+  color: white !important;
+}
+#card-body {
+  width: 276px !important;
+  //margin: 0px 10px;
+  margin-left: 22px;
+}
+:hover#card-body {
+  border: 2px solid #dc241f;
+}
+
+#cardNew-p {
+  position: absolute;
+  bottom: 5%;
+  padding-left: none !important;
+  :hover {
+    color: #860617;
+  }
+}
+
+@media (max-width: 768px) {
+  .assets {
+    padding-bottom: 1.875rem;
+  }
+  .content-title {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .card-main {
+    .card-img-top {
+      height: 105px;
+    }
+
+    h5 {
+      padding-top: 0.33125rem;
+      font-size: 18.41px !important;
+      font-weight: bold !important;
+      width: auto !important;
+    }
+  }
+  .container-secondary {
+    padding-top: 1.5625rem;
+  }
+  .card {
+    border-radius: 0.3125rem !important;
+  }
+  .card-secondary {
+    &.one {
+      padding-right: 0.5rem !important;
+      opacity: 1;
+    }
+    &.two {
+      padding-left: 0.5rem !important;
+      opacity: 1;
+    }
+
+    .card-img-top {
+      height: auto;
+      object-fit: fill;
+      opacity: 1;
+      cursor: pointer;
+    }
+    .cardFeatured-Price {
+      display: flex;
+      justify-content: space-between;
+      color: #dc3545 !important;
+    }
+    .cardFeatured-Brands {
+      img {
+        height: 20px;
+        margin-bottom: 13px;
+      }
+    }
+
+    h5 {
+      padding-top: 0.33125rem;
+      font-size: 12px !important;
+      font-weight: bold !important;
+      width: auto !important;
+    }
+  }
+  #cardFeatured-P {
+    font-size: 12px;
+    color: #4d4d4d;
+    font-weight: 600;
+    margin-left: 75%;
+  }
+  .card-header {
+    height: 35px;
+    padding: 0;
+    padding-top: 0.33125rem;
+  }
+
+  .button-red-section {
+    width: 18.75rem;
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+  }
+  //Partials/Catalog/Cars //
+}
+//
+//.pagination-sm {
+//  @include pagination-size(
+//    $pagination-padding-y-sm,
+//    $pagination-padding-x-sm,
+//    $font-size-sm,
+//    $line-height-sm,
+//    $border-radius-sm
+//  );
+//}
+
+//Navbar
+.navbar__subMenu {
+  :hover {
+    background-color: #dc241f !important;
+    color: #e5e5e5;
+  }
+  :active {
+    background-color: #dc241f !important;
+    color: #e5e5e5;
+  }
+}
+:hover.dropdown-item {
+  background-color: #4d4d4d !important;
+  color: white !important;
+}
+:active.dropdown-item {
+  background-color: #4d4d4d !important;
+  color: white !important;
+}
+
+.page-item.active .page-link {
+  background-color: #dc241f !important;
+  color: white !important;
+}
+
+.page-link {
+  border: none !important;
+  color: #4d4d4d !important;
+  font-weight: bold;
+}
+
+.page-item.disabled .page-link {
+  border-color: white;
+  color: #4d4d4d;
+}
+
+.b-pagination-pills .page-item .page-link {
+  border-radius: 5px !important;
+}

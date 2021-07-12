@@ -1,0 +1,464 @@
+.cotiza-component {
+  p,
+  label,
+  span {
+    font-family: 'Lato', sans-serif;
+  }
+
+  #cotiza__p1 {
+    margin-left: -15px;
+    @media (max-width: 991px) {
+      margin-left: -15px;
+      margin-bottom: 5px;
+    }
+  }
+
+  #GasPump {
+    margin-right: 10%;
+  }
+
+  .cotiza__downloadIcon {
+    position: relative;
+    top: 12px;
+    right: 56%;
+    color: #5a6268;
+  }
+
+  h5 {
+    color: #4d4d4d;
+    margin-left: 30px;
+    margin-bottom: 4% !important;
+    font-weight: 600;
+  }
+
+  .fakeSpace {
+    height: 50px;
+  }
+
+
+
+  .cotiza_formContainer {
+    background-color: #e5e5e5;
+    padding: 30px;
+    border-radius: 5px;
+
+    label {
+      font-size: 14px;
+      line-height: 1.5px;
+      margin-left: 10px;
+      font-weight: 600;
+      color: #4d4d4d;
+      margin-bottom: 15px !important;
+    }
+
+    p {
+      padding-left: 0;
+      font-size: 10px;
+      color: #4d4d4d;
+    }
+
+    input {
+      margin-bottom: 20px;
+    }
+  }
+
+  .cotiza__inputCheck {
+    display: flex;
+
+    .custom-control {
+      right: 82%;
+      top: 22px;
+    }
+
+    p {
+      margin-top: 25px;
+      margin-left: 10px;
+    }
+  }
+
+  .cotiza__inputCheck2 {
+  }
+
+  .cotiza__inputRadio1 {
+    display: flex;
+
+    p {
+      margin-left: 10px;
+    }
+
+    .custom-control {
+      position: relative;
+      top: -2px;
+      right: 25%;
+    }
+  }
+
+  .cotiza__inputRadio2 {
+    display: flex;
+
+    p {
+      margin-left: 10px;
+    }
+
+    .custom-control {
+      top: -3px;
+      right: 76%;
+    }
+  }
+
+  .cotizar__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+
+    button {
+      border-radius: 25px;
+      background-color: #dc241f;
+      border-color: transparent;
+      width: 65%;
+      height: 50px;
+      font-weight: 600;
+    }
+  }
+
+  .cotiza__dataSheet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cotiza__imgColor_container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 2%;
+
+    label {
+      font-size: 10px;
+      color: gray;
+      font-weight: bold;
+    }
+  }
+
+  .cotiza_nombreCar {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    label {
+      font-size: 15px;
+      color: gray;
+      font-weight: bold;
+    }
+  }
+
+  .cotiza__imgColor {
+    display: flex;
+    position: relative;
+    top: 10%;
+  }
+
+  .cotiza__displayPrice {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 2%;
+    font-size: 18px;
+
+    span {
+      color: #595959;
+      text-decoration: line-through;
+    }
+
+    p {
+      color: #dc241f;
+    }
+
+    :first-child {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        color: #595959;
+        font-weight: 600;
+      }
+    }
+
+    :last-child {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        color: #595959;
+        margin-left: 15px;
+        font-weight: 600;
+      }
+    }
+  }
+
+
+
+  .cotiza__downloadSheet {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 13%;
+    height: 50px;
+
+    button {
+      background-color: #b2b2b2;
+      border-color: transparent !important;
+      color: #4d4d4d;
+      font-size: 15px;
+      font-weight: bold;
+      width: 350px !important;
+      border-radius: 25px;
+      height: 50px;
+    }
+    #faDownload {
+      position: absolute;
+      right: 70%;
+      top: 30%;
+      color: #4d4d4d;
+    }
+  }
+
+  .cotiza__buyOnline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #e5e5e5;
+    position: relative;
+    top: 22.3%;
+    border-radius: 5px;
+
+    label {
+      font-size: 12px;
+      color: #595959;
+      text-align: center;
+    }
+  }
+
+  .cotizar__footer {
+    background-color: #e5e5e5;
+    display: flex;
+    margin-top: 60px;
+
+    label {
+      font-size: 10px;
+      color: gray;
+      font-weight: 600;
+      padding: 5px;
+      height: 50px;
+      text-align: center;
+    }
+  }
+
+  .cotiza__button {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+
+    button {
+      border-radius: 25px;
+      background-color: #dc241f;
+      border-color: #dc241f;
+      width: 75%;
+    }
+  }
+
+  .cotiza__buttonOnline {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    color: #595959;
+
+    button {
+      border-radius: 25px;
+      background-color: #dc241f;
+      border-color: #dc241f;
+      width: 65%;
+      height: 50px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+  }
+
+  #quotation__btnError {
+    line-height: 20px;
+    margin-top: 4px;
+  }
+
+  /*---------------------------------
+  -----------MEDIA QUERY------------
+  -------------------------------*/
+  @media (max-width: 1199px) {
+    .cotiza__imgColor_container img {
+      width: 100%;
+    }
+    .cotiza__inputCheck .custom-control {
+      right: 96%;
+    }
+    .cotiza__inputRadio1 .custom-control {
+      top: -5px;
+      right: 34%;
+    }
+    .cotiza__inputRadio2 .custom-control {
+      right: 96%;
+    }
+    .cotizar__button button {
+      width: 75%;
+    }
+    .cotiza__buyOnline {
+      top: 32%;
+      // button {
+      //     width: 75%;
+      // }
+    }
+    .cotiza__downloadSheet {
+      button {
+        width: 75%;
+        font-size: 12px;
+      }
+    }
+
+    .cotiza__downloadIcon {
+      top: 13px;
+      right: 68%;
+      color: #5a6268;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .cotiza__inputRadio1 .custom-control {
+      top: -5px;
+      right: 53%;
+    }
+
+    .cotizar__button button {
+      width: 100%;
+    }
+    .cotiza__buyOnline {
+      top: 32.5%;
+
+      button {
+        width: 90%;
+      }
+    }
+    .cotiza__downloadIcon {
+      right: 83%;
+    }
+    .cotiza__downloadSheet {
+      top: 25%;
+
+      button {
+        width: 100%;
+        font-size: 11px !important;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    #form {
+      margin-top: 45%;
+    }
+    .cover-img img {
+      width: 100%;
+      height: auto;
+    }
+    .cotiza__downloadIcon {
+      right: 67%;
+    }
+    .cotiza__downloadSheet button {
+      width: 85%;
+    }
+    .cotiza__inputCheck .custom-control {
+      right: 97%;
+    }
+    .cotiza__inputRadio1 .custom-control {
+      right: 29%;
+    }
+    .cotiza__inputRadio2 .custom-control {
+      right: 92%;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .cotiza__imgColor_container img {
+      width: 100%;
+    }
+    .cotiza__inputCheck .custom-control {
+      right: 91%;
+    }
+    .cotiza__inputRadio1 .custom-control {
+      right: 27%;
+    }
+    .cotiza__inputRadio2 .custom-control {
+      right: 85%;
+    }
+  }
+
+  @media (max-width: 414px) {
+    .cotiza__imgColor_container img {
+      width: 100%;
+    }
+    #GasPump {
+      margin-right: 10%;
+    }
+    #form {
+      margin-top: 60%;
+    }
+    h5 {
+      margin-bottom: 8% !important;
+    }
+    .cotiza__displayPrice {
+      text-align: center;
+    }
+    .cotiza__inputCheck .custom-control {
+      right: 96%;
+    }
+    .cotiza__inputRadio1 .custom-control {
+      right: 41%;
+    }
+    .cotiza__inputRadio2 .custom-control {
+      right: 95%;
+    }
+    .cotiza__downloadSheet button {
+      font-size: 12px;
+      width: 85% !important;
+      height: 35px;
+    }
+    .cotiza__buttonOnline button {
+      height: 40px;
+    }
+    .cotizar__button button {
+      height: 40px;
+    }
+    .cotiza__downloadIcon {
+      top: 5px;
+      right: 74%;
+    }
+  }
+
+  @media (max-width: 375px) {
+    #form {
+      margin-top: 65%;
+    }
+    .cotiza__downloadIcon {
+      top: 5px;
+      right: 77%;
+    }
+    .cotiza__imgColor_container img {
+      width: 100% !important;
+    }
+    .cotiza__displayPrice {
+      text-align: center;
+    }
+    .cotiza__downloadSheet button {
+      font-size: 11px;
+    }
+    .cotiza__inputRadio1 .custom-control {
+      right: 48%;
+    }
+  }
+}

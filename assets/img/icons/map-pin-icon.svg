@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>PinMap</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Gracias-Desktop-Suzuki" transform="translate(-851.000000, -584.000000)">
+            <g id="PinMap" transform="translate(852.000000, 585.000000)">
+                <path d="M17,7 C12.5887425,7 9,10.5143417 9,14.8341049 C9,21.2702651 16.2037056,27.5546177 16.5104783,27.8190612 C16.650321,27.9396163 16.8251244,28 17,28 C17.1748756,28 17.349679,27.9396871 17.489594,27.8190612 C17.7962222,27.5546884 25,21.2703358 25,14.8341049 C25,10.5143417 21.4112575,7 17,7 Z M17,13 C18.1028116,13 19,13.8971836 19,15 C19,16.1028163 18.1028116,17 17,17 C15.8971883,17 15,16.1028163 15,15 C15,13.8971836 15.8971883,13 17,13 Z" fill="#E00B2D" fill-rule="nonzero"></path>
+                <circle id="Oval" stroke="#E00B2D" stroke-width="2" cx="17" cy="17" r="17"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

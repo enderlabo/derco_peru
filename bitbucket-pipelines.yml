@@ -1,0 +1,38 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+options:
+  max-time: 20
+
+pipelines:
+  branches:
+    develop:
+    - step:
+        max-time: 20
+        name: "Deploying to Test environment"
+        deployment: Test
+        script:
+          - echo "Deploying to Test Environment"
+          - pipe: atlassian/ssh-run:0.1.4
+            variables:
+              SSH_USER: 'ubuntu'
+              SERVER: '3.220.105.150'
+              MODE: 'command'
+              COMMAND: './deployment-scripts/deploy-dercoperu-client.sh'
+          - echo "Successfully deployed to test environment"
+    master:
+    - step:
+        max-time: 20
+        name: "Deploying to Production environment"
+        deployment: Production
+        script:
+          - echo "Deploying to Production Environment"
+          - pipe: atlassian/ssh-run:0.1.4
+            variables:
+              SSH_USER: 'ubuntu'
+              SERVER: '50.19.47.154'
+              MODE: 'command'
+              COMMAND: './deployment-scripts/deploy-dercoperu-client.sh'
+          - echo "Successfully deployed to Production environment"
